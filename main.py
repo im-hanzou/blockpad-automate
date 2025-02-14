@@ -217,7 +217,7 @@ def main():
     """
     print(Fore.CYAN + banner + Style.RESET_ALL)
     
-    print(f"{Fore.CYAN}Register first: {Fore.GREEN}https://testnet.blockpad.fun/register?ref=TZSXOS\n{Style.RESET_ALL}")
+    print(f"{Fore.CYAN}Register first: {Fore.GREEN}https://testnet.blockpad.fun/register?ref=V779JC\n{Style.RESET_ALL}")
     bearer_token = input(f"{Fore.YELLOW}Now enter your Bearer token: {Style.RESET_ALL}")
     
     bot = BlockpadAutomation(bearer_token)
