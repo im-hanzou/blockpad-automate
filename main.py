@@ -66,6 +66,7 @@ class BlockpadAutomation:
             "amount": amount
         }
         response = requests.post(f"{self.base_url}/swap/execute", headers=self.headers, json=payload)
+        time.sleep(3)
         if response.status_code == 200:
             self.log_with_time(f"Swap successful: {from_token} to {to_token}", Fore.GREEN)
             return True
@@ -154,6 +155,7 @@ class BlockpadAutomation:
             response = requests.post(f"{self.base_url}/liquidity/add", 
                                    headers=self.headers, 
                                    json={"tICEAmount": 10})
+            time.sleep(3)
             if response.status_code == 200:
                 self.log_with_time("Liquidity added successfully!", Fore.GREEN)
                 
@@ -161,6 +163,7 @@ class BlockpadAutomation:
                 remove_response = requests.post(f"{self.base_url}/liquidity/remove", 
                                              headers=self.headers, 
                                              json={"tICEAmount": 10})
+                time.sleep(3)
                 if remove_response.status_code == 200:
                     self.log_with_time("Liquidity removed successfully!", Fore.GREEN)
                     return True
@@ -184,6 +187,7 @@ class BlockpadAutomation:
             response = requests.post(f"{self.base_url}/staking/stake", 
                                    headers=self.headers, 
                                    json={"token": "tICE", "amount": 1})
+            time.sleep(3)
             if response.status_code == 200:
                 self.log_with_time("Staking successful!", Fore.GREEN)
                 
@@ -191,6 +195,7 @@ class BlockpadAutomation:
                 unstake_response = requests.post(f"{self.base_url}/staking/unstake", 
                                               headers=self.headers, 
                                               json={"token": "tICE", "amount": 1})
+                time.sleep(3)
                 if unstake_response.status_code == 200:
                     self.log_with_time("Unstaking successful!", Fore.GREEN)
                     return True
@@ -255,8 +260,6 @@ def main():
                             if retry_count < 5:
                                 bot.log_with_time(f"Retrying faucet claim in 1 minute... (Attempt {retry_count}/6)", Fore.YELLOW)
                                 time.sleep(60)
-
-                bot.display_user_stats()
 
             bot.perform_random_task()
 
