@@ -4,7 +4,8 @@ Blockpad Testnet automate perform task script.
 ## Tools and components required
 1. Blockpad Account, Register here: [https://testnet.blockpad.fun/register](https://testnet.blockpad.fun/register?ref=V779JC)
 2. Blockpad Account Bearer Token
-3. VPS or RDP (OPTIONAL)
+3. VPS or RDP (OPTIONAL), Get free $200 credit [DigitalOcean](https://m.do.co/c/3f132e0f7e13) for 60 days here: [Register](https://m.do.co/c/3f132e0f7e13)
+4. Python3 Latest
 ## How to get Bearer Token
 1. Open your browser console, here's the tutorial [YouTube](https://www.youtube.com/watch?v=Vmi-mVcn1uQ&ab_channel=SpeedyTutorials)
 2. Paste this script to browser console:
